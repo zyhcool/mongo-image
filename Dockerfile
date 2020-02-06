@@ -106,4 +106,4 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 27017
 # 启动指定conf文件
-CMD ["mongod --config=mongod.conf"]
+CMD ["mongod"]
