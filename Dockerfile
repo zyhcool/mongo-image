@@ -100,7 +100,7 @@ RUN mkdir -p /data/db /data/configdb \
 VOLUME /data/db /data/configdb
 
 # mongod.conf 自定义conf文件
-COPY ./mongodb.conf /etc/mongod.conf
+COPY mongod.conf /etc/mongod.conf
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
