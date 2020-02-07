@@ -106,4 +106,4 @@ EXPOSE 27017
 
 # CMD ["mongod"]
 # 启动指定conf文件
-CMD ["mongod","--config","/etc/mongod.conf"]
+CMD ["mongod","--config","/etc/mongo/mongod.conf"]
