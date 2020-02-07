@@ -99,11 +99,11 @@ RUN mkdir -p /data/db /data/configdb \
 	&& chown -R mongodb:mongodb /data/db /data/configdb
 VOLUME /data/db /data/configdb
 
-# mongod.conf 自定义conf文件
-COPY mongod.conf /etc/
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 27017
+
+# CMD ["mongod"]
 # 启动指定conf文件
 CMD ["mongod","--config","/etc/mongod.conf"]
