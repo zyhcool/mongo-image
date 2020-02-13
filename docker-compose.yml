@@ -12,7 +12,7 @@ services:
       - swarm-net
     deploy:
       mode: replicated
-      replicas: 2
+      replicas: 4
 networks:
   swarm-net:
     driver: overlay
