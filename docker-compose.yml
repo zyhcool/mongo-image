@@ -1,0 +1,21 @@
+# docker swarm 部署
+version: '3.7'
+services:
+  mongo:
+    build:
+      context: .
+      dockerfile: base.Dockerfile
+    image: zyhcool/mongo:replSet
+    ports:
+      - 27017:27017
+    volumes:
+      - ~/data/db:/data/db
+      - /var/projects/mongo-image:/etc/mongo
+    networks:
+      - swarm-net
+    deploy:
+      mode: replicated
+      replicas: 2
+networks:
+  swarm-net:
+    driver: overlay
