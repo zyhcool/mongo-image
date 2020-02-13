@@ -4,7 +4,7 @@ services:
   mongo:
     image: zyhcool/mongo:replSet
     ports:
-      - 0.0.0.0:27017:27017/tcp
+      - 27017:27017
     volumes:
       - ~/data/db:/data/db
       - /var/projects/mongo-image:/etc/mongo
