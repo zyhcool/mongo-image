@@ -2,9 +2,6 @@
 version: '3.7'
 services:
   mongo:
-    build:
-      context: .
-      dockerfile: base.Dockerfile
     image: zyhcool/mongo:replSet
     ports:
       - 27017:27017
